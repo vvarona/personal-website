@@ -4,23 +4,153 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Victoria Varona Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/svg+xml" sizes="any"        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>"/>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/svg+xml" href="/img/logo.svg" />
+
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
   </head>
   <body>
-    <div class="splash__container" id="splash__container">
-      <span class="splash__text">Hello!</span>
-    </div>
-    <main id="app">
-      <h1>
-        Victoria Varona.
-        <span class="title__span">Fullstack Developer & Graphic Designer</span>
-      </h1>
-      <p>
+    
+    <main id="app" class="main-grid-container">
+      <picture class="logo">
+        <img src="/img/logo.svg" alt="Victoria Varona Logo" />
+      </picture>
+      <section class="hello card">
+        <span>Hello!</span>
+      </section>
+      <!-- <section class="hello card" >
+        <div>
+          <span>Hello</span>
+          <span>Hola</span>
+          <span>Ciao</span>
+          <span>Hej</span>
+          <span>Hello</span>
+        </div>
+      </section> -->
+      <h1 class="name">Victoria Varona</h1>
+
+      <div class="about card">
+        <h2>Who am I?</h2>
+        <p>
+          Someone who has a passion for creating. An empathic and curious young <i>"devsigner"</i> looking to have fun learning, and making the web a cooler place. 
+        </p>
+      </div>
+
+      <section class="design-container card">
+        <h2>As a Graphic Designer</h2>
+        <p>
+          I have +3 years of working experience, having done Packaging Design, Brochures and Digital Marketing. I am proficient with the following softwares.
+        </p>
+        <!-- <ul>
+          <li>
+            <iconify-icon icon="cib:adobe-illustrator" class="icon-width-medium"></iconify-icon>
+          </li>
+          <li>
+            <iconify-icon icon="cib:adobe-photoshop" class="icon-width-medium"></iconify-icon>
+          </li>
+          <li>
+            <iconify-icon icon="cib:adobe-after-effects" class="icon-width-medium"></iconify-icon>
+          </li>
+          <li>
+            <iconify-icon icon="simple-icons:figma" class="icon-width-medium"></iconify-icon>
+          </li>
+          <li>
+            <iconify-icon icon="simple-icons:blender" class="icon-width-medium"></iconify-icon>
+          </li>
+        </ul> -->
+        <div class="carousel-container">
+          <div class="slider-container-inner">
+            <img src="/img/zitrone-pint.png" alt="" />
+            <!-- <img src="./public/img/thermometer-box.png" alt="" />
+              <img src="./public/img/pills-box.png" alt="" /> -->
+            </div>
+          </div>
+      </section>
+      <section class="web-container card">
+        <h2>As a Web Developer</h2>
+        <p>
+          I've worked on both front-end and back-end projects. I also have knowledge of databases, testing and devops.
+        </p>
+        <div>
+          <h3>Some Projects</h3>
+          <a href="https://vvarona.github.io/Harry-Potter-Characters-List/">Harry potters Characters</a>
+          <a href="https://vvarona.github.io/Friends-Quotes/">Friends Quotes</a>
+          <a href="https://my-awesome-proyect-ad61a.firebaseapp.com/">Pokedex</a>
+        </div>
+        <!-- <ul>
+          <li>
+            <iconify-icon icon="cib:html5-shield" class="icon-width-medium"></iconify-icon>
+          </li>
+          <li>
+            <iconify-icon icon="cib:css3-shiled" class="icon-width-medium"></iconify-icon>
+          </li>
+          <li>
+            <iconify-icon icon="cib:javascript" class="icon-width-medium"></iconify-icon>
+          </li>
+          <li>
+            <iconify-icon icon="cib:react" class="icon-width-medium"></iconify-icon>
+          </li>
+          <li>
+            <iconify-icon icon="simple-icons:nodedotjs" class="icon-width-medium"></iconify-icon>
+          </li>
+        </ul> -->
+      </section>
+
+      <div class="socials card">
+        <h2>Find me in</h2>
+        <ul>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/vvaronad/"
+              title="Linkedin"
+              target="”_blank”"
+            >
+              <iconify-icon icon="cib:linkedin-in" width="24"></iconify-icon>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/vvarona"
+              title="Github"
+              target="”_blank”"
+            >
+              <iconify-icon icon="cib:github" width="24"></iconify-icon>
+            </a>
+          </li>
+          <li>
+            <a href="#" title="Codepen" target="”_blank”">
+              <iconify-icon icon="cib:codepen" width="24"></iconify-icon>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/varonadesign/"
+              title="Instagram"
+              target="”_blank”"
+            >
+              <iconify-icon icon="cib:instagram" width="24"></iconify-icon>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://twitter.com/vvaronad"
+              title="Twitter"
+              target="”_blank”"
+            >
+              <iconify-icon icon="cib:twitter" width="24"></iconify-icon>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="contact card">
+        <a href="mailto:vvaronad@gmail.com">Contact</a>
+      </div>
+      <!-- <p>
         I'm currently working on this site. But please, check out my
         <a href="https://www.linkedin.com/in/vvaronad/">Linkedin</a> and
         <a href="https://github.com/vvarona">Github.</a>
-      </p>
+      </p> -->
     </main>
     <script type="module" src="main.js"></script>
   </body>
