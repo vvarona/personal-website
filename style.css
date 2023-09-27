@@ -25,16 +25,16 @@ html{
   --transition-out: all 200ms ease-out;
   --primary-color: rgb(62, 61, 66);
   --secondary-color: rgb(236, 239, 232);
-  font-size: 16px;
+  font-size: 20px;
   font-family: 'Poppins';
   color: var(--primary-color);
 }
 
 body {
   display: grid;
-  aspect-ratio: 6 / 1;
   margin: 0;
   padding: 0;
+  place-content: center;
 }
 .card {
   --color-1: rgb(197, 207, 211);
@@ -43,7 +43,7 @@ body {
   background: linear-gradient(129deg, var(--color-1) 0%, var(--color-2) 100%);
   border: 5px solid rgba(245, 245, 245, 0.364);
   border-radius: 32px;
-  padding: 1rem 1.5rem;
+  padding: 4rem 1.5rem;
   filter: drop-shadow(2px 5px 5px #00000032);
 }  
 
@@ -57,50 +57,49 @@ li {
   list-style: none;
 }
 img {
-  width: 80vw;
+  width: 60vw;
 }
 
 .main-grid-container{
+  
   padding: 2% 5%;
   display: grid;
   gap: 1rem .5rem; 
   grid-template-areas: 
-  'hello hello'
-  'logo name'
+  'logo logo'
+  'name name'
   'about about'
   'web web'
   'web web'
   'design design'
   'design design'
-  'socials contact'
+  'contact contact'
+  'socials socials'
   ;
 }
 
 .logo{
   grid-area: logo;
-  
-}
-.logo img {
-  width: 100%;
-}
-
-.hello{
-  grid-area: hello; 
-  font-family: var(--xl-font-family);
-  font-size: 5em;
   display: grid;
   place-content: center;
+}
+
+
+.hello{
+  display: none;
 }
 
 .name {
   grid-area: name;
   place-self: center;
-  font-size: clamp(3rem, calc(4vw + 1rem), 7rem);
+  font-size: clamp(3rem, calc(4vw + 1rem), 70rem);
   margin: .1em calc(1vw + 0.25rem) 0 calc(1vw + 0.25rem);
-  line-height: 90%;
+  line-height: 120%;
   letter-spacing: 0.15vw;
   font-family: Pillowlava;
   font-weight: 900;
+  text-align: center;
+  padding: 1rem 0 2.5rem 0;
 }
 
 .about {
@@ -117,8 +116,9 @@ img {
   --color-2: rgb(160, 223, 71);
   grid-area: web;
   grid-template-areas: 
-  'title  carousel'
-  'paragraph  carousel'
+  'title'
+  'paragraph'
+  'carousel'
   ;
 }
 
@@ -186,7 +186,7 @@ img {
 .socials a,
 .socials a {
   color: inherit;
-  transition: var(--transition-in)
+  transition: var(--transition-in);
 }
 .socials a:hover{
   --scale: 1.4;
@@ -196,7 +196,10 @@ img {
 .socials a *{
   scale: var(--scale);
 }
-
+.socials-icon{
+  font-size: 2rem;
+  padding: .25rem;
+}
 .contact {
   grid-area: contact;
   display: grid;
@@ -225,7 +228,7 @@ img {
 }
 .slider-container{
   overflow: hidden;
-  width: 80vw;
+  width: 60vw;
   aspect-ratio: 1/1;
 }
 .slider-container-inner{
@@ -269,8 +272,29 @@ img {
 }
 
 @media (min-width: 50em) {
+  :root{
+    font-size: 16px;
+  }
   img {
     width: 20vw;
+  }
+  .card{
+    padding: 1rem 2rem;
+  }
+  .hello{
+    grid-area: hello; 
+    font-family: var(--xl-font-family);
+    font-size:  clamp(2rem, calc(4vw + 1rem), 7rem);;
+    display: grid;
+    place-content: center;
+  }
+  .name{
+    text-align: left;
+    line-height: 90%;
+    padding: 0;
+  }
+  .logo{
+    width: 100%;
   }
   .slider-container{
     width: 20vw;
@@ -287,10 +311,15 @@ img {
     ;
   }
   .design-container {
-    width: 95%;
     grid-template-areas: 
     ' carousel title'
     ' carousel paragraph'
   ;
+  }
+  .web-container{
+    grid-template-areas: 
+    'title  carousel'
+    'paragraph  carousel'
+    ;
   }
 }
